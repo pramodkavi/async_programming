@@ -59,15 +59,12 @@ function sendConfirmationEmail(userId) {
 // Callback hell starts here
 fetchUserData()
   .then((userData) => {
-    console.log(userData, "Hutto");
     validateUserData(userData);
   })
   .then((userData) => {
     saveToDatabase(userData);
-    console.log(userData, "Hutto");
   })
   .then((userId) => {
-    console.log(userId, "Hutto");
     sendConfirmationEmail(userId);
   })
   .catch(() => {
