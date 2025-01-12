@@ -13,4 +13,7 @@ function displayData(data) {
 }
 
 // Pass 'displayData' as a callback to 'fetchData'
-fetchData(displayData);
+// fetchData(displayData);
+fetchData((data)=>{
+    console.log("Data fetched:", data);
+});
